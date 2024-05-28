@@ -28,13 +28,13 @@ class LoadingScreen extends ConsumerWidget {
                 child: LinearProgressIndicator(
                   semanticsLabel: 'Loading Bar',
                   borderRadius: BorderRadius.circular(20),
-                  value: ref.watch(loadingPageProvider),
+                  value: ref.watch(loadingProgressProvider).$1,
                   backgroundColor: Colors.grey[300],
                   valueColor: AlwaysStoppedAnimation(GameColors().green),
                 ),
               ),
               Text(
-                '80%',
+                '${ref.watch(loadingProgressProvider).$2}%',
                 style: TextStyle(color: GameColors().black),
               ),
             ]),
@@ -43,7 +43,7 @@ class LoadingScreen extends ConsumerWidget {
       )),
       floatingActionButton: FloatingActionButton(
         onPressed: () {
-          ref.read(loadingPageProvider.notifier).debugButton();
+          ref.read(loadingProgressProvider.notifier).debugButton();
         },
         child: const Icon(Icons.add),
       ),

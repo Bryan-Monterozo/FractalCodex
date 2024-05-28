@@ -1,12 +1,12 @@
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:fractal_codex/core/colors/colors.dart';
 import 'package:fractal_codex/core/initializer.dart';
 import 'package:fractal_codex/core/routes/routes.dart';
-import 'package:fractal_codex/modules/home/view/home_screen.dart';
 
-void main() {
+void main() async {
+  await ScreenUtil.ensureScreenSize();
   final container = ProviderContainer();
   Initializer().newGameInit();
   runApp(UncontrolledProviderScope(container: container, child: const MyApp()));

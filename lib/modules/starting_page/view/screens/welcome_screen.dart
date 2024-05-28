@@ -1,10 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:fractal_codex/core/routes/route_name.dart';
-import 'package:fractal_codex/core/routes/routes.dart';
-import 'package:fractal_codex/modules/starting_page/controller/starting_page_controller.dart';
 import 'package:fractal_codex/modules/starting_page/view/widgets/confirm_button.dart';
-import 'package:fractal_codex/shared/appbar/game_bar.dart';
 
 class WelcomeScreen extends ConsumerWidget {
   const WelcomeScreen({super.key});

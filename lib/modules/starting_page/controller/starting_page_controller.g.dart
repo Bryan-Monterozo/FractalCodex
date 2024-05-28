@@ -6,22 +6,23 @@ part of 'starting_page_controller.dart';
 // RiverpodGenerator
 // **************************************************************************
 
-String _$loadingPageHash() => r'ec3b38a8600973e5c153a3a141403e732bb6fbe7';
+String _$loadingProgressHash() => r'aee01869b5f432d58aaeb24bc18cac3bfd43fe48';
 
-/// See also [LoadingPage].
-@ProviderFor(LoadingPage)
-final loadingPageProvider =
-    AutoDisposeNotifierProvider<LoadingPage, double>.internal(
-  LoadingPage.new,
-  name: r'loadingPageProvider',
-  debugGetCreateSourceHash:
-      const bool.fromEnvironment('dart.vm.product') ? null : _$loadingPageHash,
+/// See also [LoadingProgress].
+@ProviderFor(LoadingProgress)
+final loadingProgressProvider =
+    AutoDisposeNotifierProvider<LoadingProgress, (double, int)>.internal(
+  LoadingProgress.new,
+  name: r'loadingProgressProvider',
+  debugGetCreateSourceHash: const bool.fromEnvironment('dart.vm.product')
+      ? null
+      : _$loadingProgressHash,
   dependencies: null,
   allTransitiveDependencies: null,
 );
 
-typedef _$LoadingPage = AutoDisposeNotifier<double>;
-String _$welcomePageHash() => r'3d30d54f4e7ce3cb1884e955f15abc73dccd2d95';
+typedef _$LoadingProgress = AutoDisposeNotifier<(double, int)>;
+String _$welcomePageHash() => r'6a93a4d62fd0597a3c08939921ece472c5b5818e';
 
 /// See also [WelcomePage].
 @ProviderFor(WelcomePage)
